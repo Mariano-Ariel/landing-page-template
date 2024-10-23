@@ -1,0 +1,275 @@
+/* src/App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f8fa; /* Color de fondo */
+  color: #24292e; /* Texto oscuro */
+}
+
+header {
+  background-color: #24292e; /* Color de fondo del encabezado */
+  color: white; /* Texto blanco */
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: white; /* Enlaces blancos */
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline; /* Subrayar enlaces al pasar el ratón */
+}
+
+/* ================= PHOTO GALERY */
+
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* ================= PHOTO CARD */
+
+.photo-card {
+  margin: 10px;
+  border: 1px solid #d1d5da; /* Borde gris claro */
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  transition: transform 0.2s; /* Animación suave al hacer hover */
+  max-width: 300px; /* Limita el ancho de cada tarjeta */
+}
+
+.photo-card:hover {
+  transform: scale(1.05); /* Aumentar ligeramente el tamaño al hacer hover */
+}
+
+.photo-card img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Asegura que la imagen no tenga espacios alrededor */
+}
+
+/* ================= BOTONERA */
+
+button {
+  background-color: #2c974b; /* Color de fondo */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 10px 15px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de la fuente */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+}
+
+button:hover {
+  background-color: #256029; /* Color de fondo al pasar el ratón */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
+}
+
+button:disabled {
+  background-color: #b0b0b0; /* Color para botones deshabilitados */
+  cursor: not-allowed; /* Cursor indicando que no se puede hacer clic */
+}
+
+/* ================= CONTACT BANNER ================= */
+
+.contact-banner {
+  background-image: url('../public/images/banner-background.jpg'); /* Ruta a la imagen de fondo */
+  height: 100vh; /* Altura del banner */
+  background-attachment: fixed; /* Efecto parallax */
+  background-size: cover; /* Asegura que la imagen cubra todo el espacio */
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  color: white; /* Color del texto */
+  padding: 20px; /* Espacio alrededor del contenido */
+  overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+/* ================= BANNER CONTENT ================= */
+
+.banner-content {
+  width: 35%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el formulario */
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados */
+  text-align: center; /* Centra el texto */
+}
+
+/* ================= CONTACT FORM ================= */
+
+.contact-banner {
+  background-image: url('../public/images/banner-background.jpg'); /* Ruta a la imagen de fondo */
+  height: 100vh; /* Altura del banner */
+  background-attachment: fixed; /* Efecto parallax */
+  background-size: cover; /* Asegura que la imagen cubra todo el espacio */
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  color: white; /* Color del texto */
+}
+
+.banner-content {
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el formulario */
+  padding: 20px 40px;
+  border-radius: 8px; /* Bordes redondeados */
+  text-align: center; /* Centra el texto */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column; /* Disposición vertical de los campos */
+}
+
+.contact-form input, 
+.contact-form textarea {
+  margin: 10px 0; /* Espaciado entre campos */
+  padding: 10px;
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #e67e22; /* Color del botón */
+  color: white; /* Color del texto del botón */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  transition: background-color 0.3s; /* Efecto al pasar el mouse */
+}
+
+.contact-form button:hover {
+  background-color: #d35400; /* Cambio de color al pasar el mouse */
+}
+
+/* src/components/Modal.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Asegúrate de que el modal esté por encima de otros elementos */
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ================= MODAL ================= */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Asegúrate de que el modal esté por encima de otros elementos */
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%; /* Max ancho del modal */
+  max-height: 90%; /* Max alto del modal */
+  overflow: hidden; /* Asegura que no se desborde */
+}
+
+.modal-image {
+  max-width: 100%; /* Limitar el ancho máximo de la imagen */
+  max-height: 80vh; /* Limitar la altura máxima al 80% del viewport */
+  object-fit: contain; /* Mantiene la proporción de la imagen y no la recorta */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsiveness para dispositivos pequeños */
+@media (max-width: 600px) {
+  .close-button {
+    font-size: 20px; /* Ajusta el tamaño del botón de cerrar en pantallas pequeñas */
+  }
+}
+
+/* ================= ABOUT ================= */
+#about {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f6f8fa;
+  width: 65%;
+  color: #24292e;
+  margin: 0 auto;
+}
+
+#about h2 {
+  margin-bottom: 20px; /* Espaciado debajo del título */
+  color: #2c974b; /* Color verde similar a GitHub para los títulos */
+}
+
+#about p {
+  margin: 10px 0; /* Espaciado entre párrafos */
+  line-height: 1.6; /* Mejora la legibilidad */
+}
+
+#about p:first-of-type {
+  font-weight: bold; /* Resalta el primer párrafo */
+}
+
+/* ================= FOOTER */
+
+footer {
+  background-color: #24292e; /* Color de fondo del pie de página */
+  color: white; /* Texto blanco */
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
